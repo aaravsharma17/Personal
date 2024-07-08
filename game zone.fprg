@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ojast"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-26 10:06:34 AM"/>
+        <attribute name="created" value="b2phc3Q7Q0lQSEVSOzIwMjItMTItMjU7MDY6MjY6MDYgUE07MjI2OA=="/>
+        <attribute name="edited" value="b2phc3Q7Q0lQSEVSOzIwMjItMTItMjU7MDY6MzI6MDYgUE07MTtvamFzdDtDSVBIRVI7MjAyMi0xMi0yNDswNTo0OTo1MiBQTTtmbGFtZXMgMi4wLmZwcmc7NjA0OA=="/>
+        <attribute name="edited" value="b2phc3Q7Q0lQSEVSOzIwMjItMTItMjU7MDY6MzM6MTAgUE07MTtvamFzdDtDSVBIRVI7MjAyMi0xMi0yNDsxMDoxMTo1MSBQTTttaW5kIHJlYWRpbmcuZnByZzs2NDA2"/>
+        <attribute name="edited" value="b2phc3Q7Q0lQSEVSOzIwMjItMTItMjU7MDY6MzU6MjAgUE07MjtvamFzdDtDSVBIRVI7MjAyMi0xMi0yNDswODoyMzozMiBQTTtkaWNlIGdhbWUuZnByZzs2MDgw"/>
+        <attribute name="edited" value="b2phc3Q7Q0lQSEVSOzIwMjItMTItMjU7MDY6Mzc6NDkgUE07MjtvamFzdDtDSVBIRVI7MjAyMi0xMi0yNTsxMjoyMzo0NSBQTTtyb2NrICwgcGFwZXIgZ2FtZS5mcHJnOzY3NjM="/>
+        <attribute name="edited" value="b2phc3Q7Q0lQSEVSOzIwMjItMTItMjY7MTA6MDY6MzQgQU07MzI7MjQwOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <output expression="&quot;welcom to game zone&quot;" newline="True"/>
+            <output expression="&quot;choose 1 for flames&quot;" newline="True"/>
+            <output expression="&quot;choose 2 for mind game&quot;" newline="True"/>
+            <output expression="&quot;choose 3 for dice game&quot;" newline="True"/>
+            <output expression="&quot;choose 4 for rock,paper,scissors&quot;" newline="True"/>
+            <input variable="c"/>
+            <if expression="c==1">
+                <then>
+                    <declare name="counter" type="Integer" array="False" size=""/>
+                    <declare name="name1, name2, jointname" type="String" array="False" size=""/>
+                    <declare name="flametrack" type="Integer" array="False" size=""/>
+                    <declare name="flames" type="String" array="True" size="6"/>
+                    <assign variable="flames[0]" expression="&quot;friends&quot;"/>
+                    <assign variable="flames[1]" expression="&quot;lovers&quot;"/>
+                    <assign variable="flames[2]" expression="&quot;affection&quot;"/>
+                    <assign variable="flames[3]" expression="&quot;marriage&quot;"/>
+                    <assign variable="flames[4]" expression="&quot;enemies&quot;"/>
+                    <assign variable="flames[5]" expression="&quot;sis and bro/ sis and sis /bro and bro&quot;"/>
+                    <assign variable="jointname" expression="&quot;&quot;"/>
+                    <output expression="&quot;enter the first name&quot;" newline="True"/>
+                    <input variable="name1"/>
+                    <output expression="&quot;enter the second name &quot;" newline="True"/>
+                    <input variable="name2"/>
+                    <assign variable="flametrack" expression="0"/>
+                    <assign variable="jointname" expression="matchnames(name1,name2)"/>
+                    <for variable="counter" start="0" end="len(jointname)-1" direction="inc" step="1">
+                        <if expression="flametrack&gt;5">
+                            <then>
+                                <assign variable="flametrack" expression="flametrack%6"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </for>
+                    <output expression="name1&amp; &quot; &amp; &quot; &amp;name2 &amp;&quot; are &quot;&amp;flames[flametrack]" newline="True"/>
+                    <output expression="&quot;thank you for playing&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="c==2">
+                        <then>
+                            <declare name="n" type="Integer" array="False" size=""/>
+                            <output expression="&quot;choose any way 1-4&quot;" newline="True"/>
+                            <input variable="n"/>
+                            <if expression="n=1">
+                                <then>
+                                    <output expression="&quot;guess a number between 1 to 10&quot;" newline="True"/>
+                                    <output expression="&quot; add 3 to the number&quot;" newline="True"/>
+                                    <output expression="&quot;multiply the number you get by 5&quot;" newline="True"/>
+                                    <output expression="&quot;add 15 to it &quot;" newline="True"/>
+                                    <output expression="&quot;divide it by 5&quot;" newline="True"/>
+                                    <output expression="&quot;now subtract you initial number from it&quot;" newline="True"/>
+                                    <breakpoint expression="" always="True"/>
+                                    <output expression="&quot;your number is 6 &quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="n=2">
+                                        <then>
+                                            <output expression="&quot;guess a number between 1 to 10&quot;" newline="True"/>
+                                            <output expression="&quot;multiply the number you get by 5&quot;" newline="True"/>
+                                            <output expression="&quot; add 10 to the number&quot;" newline="True"/>
+                                            <output expression="&quot;divide it by 5&quot;" newline="True"/>
+                                            <output expression="&quot;now subtract you initial number from it&quot;" newline="True"/>
+                                            <breakpoint expression="" always="True"/>
+                                            <output expression="&quot;your number is 2 &quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="n=3">
+                                                <then>
+                                                    <output expression="&quot;guess a number between 1 to 10&quot;" newline="True"/>
+                                                    <output expression="&quot;multiply the number you get by 2&quot;" newline="True"/>
+                                                    <output expression="&quot;multiply the number you get by 5&quot;" newline="True"/>
+                                                    <output expression="&quot;divide it by your initial number&quot;" newline="True"/>
+                                                    <output expression="&quot;now subtract 7 from it&quot;" newline="True"/>
+                                                    <breakpoint expression="" always="True"/>
+                                                    <output expression="&quot;your number is 3&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="n=4">
+                                                        <then>
+                                                            <output expression="&quot;guess a number between 1 to 10&quot;" newline="True"/>
+                                                            <output expression="&quot; add 3 to the number&quot;" newline="True"/>
+                                                            <output expression="&quot;multiply the number you get by 2&quot;" newline="True"/>
+                                                            <output expression="&quot;now subtract 4 from it&quot;" newline="True"/>
+                                                            <output expression="&quot;divide it by 2&quot;" newline="True"/>
+                                                            <output expression="&quot;now subtract you initial number from it&quot;" newline="True"/>
+                                                            <breakpoint expression="" always="True"/>
+                                                            <output expression="&quot;your number is 1&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;guess a number between 1 to 10&quot;" newline="True"/>
+                                                            <output expression="&quot;multiply the number you get by 2&quot;" newline="True"/>
+                                                            <output expression="&quot; add 10 to the number&quot;" newline="True"/>
+                                                            <output expression="&quot;divide it by 2&quot;" newline="True"/>
+                                                            <output expression="&quot;now subtract 5 from it&quot;" newline="True"/>
+                                                            <breakpoint expression="" always="True"/>
+                                                            <output expression="&quot;you get your number&quot;" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="c==3">
+                                <then>
+                                    <declare name="counter, P1score, P2score" type="Integer" array="False" size=""/>
+                                    <assign variable="P1score" expression="0"/>
+                                    <assign variable="P2score" expression="0"/>
+                                    <for variable="counter" start="0" end="4" direction="inc" step="1">
+                                        <output expression="&quot;Round&quot;&amp;counter+1" newline="True"/>
+                                        <output expression="&quot;Ready player 1&quot;" newline="True"/>
+                                        <assign variable="P1score" expression="play(P1score)"/>
+                                        <output expression="&quot;Ready player 2&quot;" newline="True"/>
+                                        <assign variable="P2score" expression="play(P2score)"/>
+                                        <output expression="&quot;player 1=&quot;&amp;P1score &amp;&quot;  &quot; &amp;&quot;player 2=&quot;&amp;P2score" newline="True"/>
+                                    </for>
+                                    <while expression="P1score==P2score">
+                                        <output expression="&quot;we have tie........ time for sudden death&quot;" newline="True"/>
+                                        <assign variable="P1score" expression="P1score+(random(6)+1)"/>
+                                        <assign variable="P2score" expression="P2score+(random(6)+1)"/>
+                                    </while>
+                                    <if expression="P1score&gt;P2score">
+                                        <then>
+                                            <output expression="&quot;player 1 is winner&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;player 2 is winner&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="c==4">
+                                        <then>
+                                            <declare name="winner" type="String" array="False" size=""/>
+                                            <declare name="exitcode" type="Boolean" array="False" size=""/>
+                                            <assign variable="exitcode" expression="false"/>
+                                            <declare name="options" type="String" array="True" size="3"/>
+                                            <assign variable="options[0]" expression="&quot;rock&quot;"/>
+                                            <assign variable="options[1]" expression="&quot;paper&quot;"/>
+                                            <assign variable="options[2]" expression="&quot;scissors&quot;"/>
+                                            <declare name="userturn" type="String" array="False" size=""/>
+                                            <declare name="computerturn" type="String" array="False" size=""/>
+                                            <while expression="exitcode==false">
+                                                <assign variable="computerturn" expression="options[random(3)]"/>
+                                                <output expression="&quot;enter your turn&quot;" newline="True"/>
+                                                <input variable="userturn"/>
+                                                <if expression="userturn==computerturn">
+                                                    <then>
+                                                        <output expression="&quot;computer played&quot; &amp;&quot; &quot; &amp;computerturn &amp;&quot; &quot; &amp; &quot;you played&quot; &amp;userturn" newline="True"/>
+                                                        <output expression="&quot;draw&quot;" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <assign variable="winner" expression="getwinner(userturn,computerturn)"/>
+                                                        <output expression="&quot;computer played&quot; &amp;&quot; &quot; &amp;computerturn &amp;&quot; &quot; &amp; &quot;you played&quot; &amp;userturn" newline="True"/>
+                                                        <output expression="winner &amp;&quot;wins&quot;" newline="True"/>
+                                                        <assign variable="exitcode" expression="true"/>
+                                                    </else>
+                                                </if>
+                                            </while>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;enter a valid option between 1-4&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <output expression="&quot;thank you for playing&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="getwinner" type="String" variable="winner">
+        <parameters>
+            <parameter name="userturn" type="String" array="False"/>
+            <parameter name="computerturn" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="winner" type="String" array="False" size=""/>
+            <if expression="userturn==&quot;Rock&quot; &amp;&amp; computerturn==&quot;Scissors&quot;">
+                <then>
+                    <assign variable="winner" expression="&quot;player&quot;"/>
+                </then>
+                <else>
+                    <if expression="userturn==&quot;Paper&quot; &amp;&amp; computerturn==&quot;Rock&quot;">
+                        <then>
+                            <assign variable="winner" expression="&quot;player&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="userturn==&quot;scissors&quot; &amp;&amp; computerturn==&quot;Paper&quot;">
+                                <then>
+                                    <assign variable="winner" expression="&quot;player&quot;"/>
+                                </then>
+                                <else>
+                                    <assign variable="winner" expression="&quot;computer&quot;"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="matchnames" type="String" variable="jointname">
+        <parameters>
+            <parameter name="name1" type="String" array="False"/>
+            <parameter name="name2" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="jointname" type="String" array="False" size=""/>
+            <declare name="match" type="Boolean" array="False" size=""/>
+            <assign variable="jointname" expression="&quot;&quot;"/>
+            <declare name="counter" type="Integer" array="False" size=""/>
+            <declare name="counter2" type="Integer" array="False" size=""/>
+            <for variable="counter" start="0" end="len(name1)-1" direction="inc" step="1">
+                <assign variable="match" expression="false"/>
+                <for variable="counter2" start="0" end="len(name2)-1" direction="inc" step="1">
+                    <if expression="char(name1,counter)==char(name2,counter2)">
+                        <then>
+                            <assign variable="match" expression="true"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="match==false">
+                    <then>
+                        <assign variable="jointname" expression="jointname&amp;char(name1,counter)"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <for variable="counter" start="0" end="len(name2)-1" direction="inc" step="1">
+                <assign variable="match" expression="false"/>
+                <for variable="counter2" start="0" end="len(name1)-1" direction="inc" step="1">
+                    <if expression="char(name2,counter)==char(name1,counter2)">
+                        <then>
+                            <assign variable="match" expression="true"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="match==false">
+                    <then>
+                        <assign variable="jointname" expression="jointname&amp;char(name2,counter)"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+    <function name="play" type="Integer" variable="score">
+        <parameters>
+            <parameter name="score" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="roll1, roll2" type="Integer" array="False" size=""/>
+            <assign variable="roll1" expression="random(6)+1"/>
+            <assign variable="roll2" expression="random(6)+1"/>
+            <output expression="&quot;roll 1 =&quot;&amp;&quot; &quot; &amp;roll1 &amp; &quot; &quot; &amp; &quot;roll 2 =&quot;&amp;&quot; &quot; &amp;roll2" newline="True"/>
+            <if expression="(roll1+roll2)%2=0">
+                <then>
+                    <assign variable="score" expression="score+((roll1+roll2)+10)"/>
+                    <if expression="roll1==roll2">
+                        <then>
+                            <assign variable="score" expression="score+(random(6)+1)"/>
+                        </then>
+                        <else/>
+                    </if>
+                </then>
+                <else>
+                    <assign variable="score" expression="score+5"/>
+                    <if expression="score&lt;0">
+                        <then>
+                            <assign variable="score" expression="0"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
